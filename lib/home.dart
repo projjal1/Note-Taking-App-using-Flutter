@@ -52,7 +52,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton.extended(
-        backgroundColor: Theme.of(context).primaryColor,
+        backgroundColor: Colors.orange,
         onPressed: () {
           gotoEditNote();
         },
@@ -132,13 +132,13 @@ class _MyHomePageState extends State<MyHomePage> {
                 color: isFlagOn ? Colors.white : Colors.grey.shade300,
               ),
               decoration: BoxDecoration(
-                  color: isFlagOn ? Colors.blue : Colors.transparent,
+                  color: isFlagOn ? Colors.green: Colors.transparent,
                   border: Border.all(
                     width: isFlagOn ? 2 : 1,
                     color:
-                        isFlagOn ? Colors.blue.shade700 : Colors.grey.shade300,
+                        isFlagOn ? Colors.green : Colors.green,
                   ),
-                  borderRadius: BorderRadius.all(Radius.circular(16))),
+                  borderRadius: BorderRadius.all(Radius.circular(30))),
             ),
           ),
           Expanded(
@@ -224,10 +224,12 @@ class _MyHomePageState extends State<MyHomePage> {
       duration: Duration(milliseconds: 200),
       firstChild: Padding(
         padding: const EdgeInsets.only(top: 8),
-        child: Text(
+        child: Center(
+          child:Text(
           'Only showing notes marked important'.toUpperCase(),
           style: TextStyle(
-              fontSize: 12, color: Colors.blue, fontWeight: FontWeight.w500),
+              fontSize: 15, color: Colors.red, fontWeight:FontWeight.bold),
+        )
         ),
       ),
       secondChild: Container(

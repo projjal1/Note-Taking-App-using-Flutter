@@ -55,7 +55,8 @@ class _SettingsPageState extends State<SettingsPage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Text('App Theme',
-                      style: TextStyle(fontFamily: 'ZillaSlab', fontSize: 24)),
+                      style: TextStyle(fontFamily: 'ZillaSlab', fontSize: 24,
+                          fontWeight:FontWeight.bold,color:Colors.red),),
                   Container(
                     height: 20,
                   ),
@@ -63,12 +64,13 @@ class _SettingsPageState extends State<SettingsPage> {
                     children: <Widget>[
                       Radio(
                         value: 'light',
+                        activeColor: Colors.amber,
                         groupValue: selectedTheme,
                         onChanged: handleThemeSelection,
                       ),
                       Text(
                         'Light theme',
-                        style: TextStyle(fontSize: 18),
+                        style: TextStyle(fontSize: 18,color:Colors.orange,fontWeight: FontWeight.bold),
                       )
                     ],
                   ),
@@ -81,7 +83,7 @@ class _SettingsPageState extends State<SettingsPage> {
                       ),
                       Text(
                         'Dark theme',
-                        style: TextStyle(fontSize: 18),
+                        style: TextStyle(fontSize: 18,color:Colors.blue,fontWeight: FontWeight.bold),
                       )
                     ],
                   ),
@@ -90,11 +92,13 @@ class _SettingsPageState extends State<SettingsPage> {
               buildCardWidget(Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: <Widget>[
-                  Text('About app',
+                  Center(
+                      child:Text('About app',
                       style: TextStyle(
+                          fontWeight: FontWeight.bold,
                           fontFamily: 'ZillaSlab',
                           fontSize: 24,
-                          color: Theme.of(context).primaryColor)),
+                          color: Colors.red))),
                   Container(
                     height: 40,
                   ),
@@ -109,7 +113,7 @@ class _SettingsPageState extends State<SettingsPage> {
                       child: Padding(
                     padding: const EdgeInsets.only(top: 8.0, bottom: 4.0),
                     child: Text(
-                      'Projjal',
+                      'Projjal Gop',
                       style: TextStyle(fontFamily: 'ZillaSlab', fontSize: 24),
                     ),
                   )),

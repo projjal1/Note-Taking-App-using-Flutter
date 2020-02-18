@@ -23,7 +23,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Flutter Notes App',
       theme: theme,
       home: MyHomePage(title: 'Home', changeTheme: setTheme),
     );
