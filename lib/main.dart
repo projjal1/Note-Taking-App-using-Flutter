@@ -12,6 +12,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  //Settings for the material ui app
   ThemeData theme = appThemeLight;
   @override
   void initState() {
@@ -42,6 +43,7 @@ class _MyAppState extends State<MyApp> {
   }
 
   void updateThemeFromSharedPref() async {
+    //Set the dark or light mode accordingly
     String themeText = await getThemeFromSharedPref();
     if (themeText == 'light') {
       setTheme(Brightness.light);

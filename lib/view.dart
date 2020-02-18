@@ -119,7 +119,7 @@ class _ViewNotePageState extends State<ViewNotePage> {
                         onPressed: handleDelete,
                       ),
                       IconButton(
-                        icon: Icon(OMIcons.share),
+                        icon: Icon(Icons.share),
                         onPressed: handleShare,
                       ),
                       IconButton(

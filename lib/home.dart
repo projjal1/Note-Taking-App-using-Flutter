@@ -87,8 +87,8 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: Icon(
                         OMIcons.settings,
                         color: Theme.of(context).brightness == Brightness.light
-                            ? Colors.grey.shade600
-                            : Colors.grey.shade300,
+                            ? Colors.blue.shade900
+                            : Colors.red,
                       ),
                     ),
                   ),
@@ -148,7 +148,9 @@ class _MyHomePageState extends State<MyHomePage> {
               padding: EdgeInsets.only(left: 16),
               height: 50,
               decoration: BoxDecoration(
-                  border: Border.all(color: Colors.grey.shade300),
+                  border: Border.all(color: Theme.of(context).brightness == Brightness.light
+                      ? Colors.black
+                      : Colors.grey.shade300),
                   borderRadius: BorderRadius.all(Radius.circular(16))),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
@@ -169,16 +171,20 @@ class _MyHomePageState extends State<MyHomePage> {
                       decoration: InputDecoration.collapsed(
                         hintText: 'Search',
                         hintStyle: TextStyle(
-                            color: Colors.grey.shade300,
+                            color: Theme.of(context).brightness == Brightness.light
+                                ? Colors.black26
+                                : Colors.white,
                             fontSize: 18,
                             fontWeight: FontWeight.w500),
-                        border: InputBorder.none,
+                        border: InputBorder.none
                       ),
                     ),
                   ),
                   IconButton(
                     icon: Icon(isSearchEmpty ? Icons.search : Icons.cancel,
-                        color: Colors.grey.shade300),
+                        color: Theme.of(context).brightness == Brightness.light
+                            ? Colors.black26
+                            : Colors.grey.shade50),
                     onPressed: cancelSearch,
                   ),
                 ],
@@ -194,6 +200,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Row(
       children: <Widget>[
         AnimatedContainer(
+
           duration: Duration(milliseconds: 200),
           curve: Curves.easeIn,
           margin: EdgeInsets.only(top: 8, bottom: 32, left: 10),
@@ -209,6 +216,9 @@ class _MyHomePageState extends State<MyHomePage> {
             softWrap: false,
           ),
         ),
+    Icon(Icons.note,
+      color: Theme.of(context).brightness == Brightness.light ? Colors.pink: Colors.grey.shade50,
+      size:60)
       ],
     );
   }
